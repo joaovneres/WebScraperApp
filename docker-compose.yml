@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  news-scraper:
+    build: .
+    environment:
+      - NEWS_SITE_URL=https://www.infomoney.com.br/mercados/
+      - ARTICLE_SELECTOR=div[data-ds-component='card-sm']
+      - TITLE_SELECTOR=div[data-ds-component='article-title'] h1
+      - SUBTITLE_SELECTOR=div[data-ds-component='article-title'] div
+      - AUTHOR_SELECTOR=div[data-ds-component='author-small'] a
+      - DATE_SELECTOR=div[data-ds-component='author-small'] time
+      - CONTENT_SELECTOR=article[data-ds-component='article'] > p
+      - BROWSER_DRIVER_PATH=/usr/local/bin/geckodriver
+      - PAGES_TO_LOAD=3
