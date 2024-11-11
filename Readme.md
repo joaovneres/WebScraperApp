@@ -109,7 +109,7 @@ java -jar target/WebScraperApp-1.0-SNAPSHOT-jar-with-dependencies.jar
 #### Passo 1: Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/WebScraperApp.git
+git clone https://github.com/joaovneres/WebScraperApp.git
 cd WebScraperApp
 ```
 
