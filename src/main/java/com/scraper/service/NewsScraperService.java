@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -89,7 +90,7 @@ public class NewsScraperService {
         WebElement loadMoreButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Carregar mais')]")));
         wait.until(ExpectedConditions.visibilityOf(loadMoreButton));
         loadMoreButton.click();
-        Thread.sleep(2500);
+        Thread.sleep(5000);
     }
 
     private void extractArticles(Document doc) {
